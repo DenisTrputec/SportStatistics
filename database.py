@@ -25,8 +25,8 @@ class Database:
             values.append((home_team_id, away_team_id, match["home_goals"], match["away_goals"], match_type_id,
                            match["date"], match["stadium"], match["attendance"], match["referee"]))
 
-        for v in values:
-            print(v)
+        for i, v in enumerate(values):
+            print(i+1, v)
         if not is_test:
             columns = "home_team_id, away_team_id, home_goals, away_goals, " \
                       "match_type_id, date, stadium, attendance, referee"
